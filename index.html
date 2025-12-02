@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Alvaro Garcia Gonzalez</title>
+    
+    <!-- ====================================================== -->
+    <!-- ============ TÍTULO Y DESCRIPCIÓN MEJORADOS ========== -->
+    <!-- ====================================================== -->
+    <title>Alvaro Garcia Gonzalez | Desarrollador Web</title>
+    <meta name="description" content="Portfolio profesional de Alvaro Garcia Gonzalez, estudiante de Desarrollo de Aplicaciones Web con experiencia en sistemas y redes.">
+    <!-- EDITAR AQUÍ: Sube un archivo 'favicon.ico' a tu repositorio para que este icono funcione -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
     <!-- Google Fonts para un estilo moderno -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome para los iconos de contacto -->
@@ -182,7 +190,7 @@
 
         .skill-item {
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
         
         .skill-item:hover {
@@ -198,6 +206,58 @@
             margin-top: 10px;
             font-weight: 600;
         }
+
+        /* --- ESTILOS PARA LA NUEVA SECCIÓN DE PROYECTOS --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Una columna por defecto */
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .project-card h4 {
+            margin: 0 0 10px 0;
+            color: var(--secondary-color);
+        }
+
+        .project-tech {
+            margin: 15px 0;
+        }
+
+        .project-tech img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .project-links a {
+            text-decoration: none;
+            color: #fff;
+            background-color: var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .project-links a:hover {
+            background-color: var(--secondary-color);
+        }
+
 
         /* --- RESPONSIVE DESIGN --- */
         @media (max-width: 900px) {
@@ -218,7 +278,8 @@
         <!-- ============ COLUMNA IZQUIERDA =============== -->
         <!-- ============================================== -->
         <aside class="sidebar">
-            <img src="https://via.placeholder.com/150" alt="Foto de Perfil" class="profile-picture">
+            <!-- EDITAR AQUÍ: Asegúrate de que tu foto se llame 'Perfil.png' y esté en una carpeta 'images' -->
+            <img src="images/Perfil.png" alt="Foto de Perfil" class="profile-picture">
             
             <h1>Alvaro Garcia Gonzalez</h1>
             <h2>Estudiante de Desarrollo de Aplicaciones Web</h2>
@@ -227,9 +288,9 @@
                 <li><i class="fas fa-phone"></i><a href="tel:655358054">655 35 80 54</a></li>
                 <li><i class="fas fa-envelope"></i><a href="mailto:alvarogarciagonzalez2211@gmail.com">alvarogarciagonzalez2211@gmail.com</a></li>
                 <li><i class="fas fa-map-marker-alt"></i><span>Valladolid, España</span></li>
-                <!-- EDITAR AQUÍ: Pon las URLs de tus perfiles -->
                 <li><i class="fab fa-linkedin"></i><a href="https://es.linkedin.com/in/%C3%A1lvaro-garc%C3%ADa-gonz%C3%A1lez-77b7a633b" target="_blank">LinkedIn</a></li>
-                <li><i class="fab fa-github"></i><a href="[URL de tu perfil de GitHub]" target="_blank">GitHub</a></li>
+                <!-- CORRECCIÓN: Este enlace ahora apunta a tu repositorio de código, no a la web -->
+                <li><i class="fab fa-github"></i><a href="https://github.com/alvarogarciagonzalez2211-collab/CV-Alvaro" target="_blank">GitHub</a></li>
             </ul>
         </aside>
 
@@ -240,10 +301,7 @@
             <section class="section">
                 <h3 class="section-title">Perfil Profesional</h3>
                 <p>
-                    Estudiante proactivo y motivado de Desarrollo con una sólida base en sistemas y redes.
-                    Mi experiencia internacional en Irlanda a través de Erasmus+ me ha proporcionado no solo habilidades técnicas de soporte,
-                    sino también una gran capacidad de adaptación y comunicación en inglés.
-                    Busco una oportunidad para aplicar mis crecientes conocimientos en desarrollo y aportar valor a un equipo dinámico.
+                    Estudiante proactivo y motivado de Desarrollo Web con una sólida base en sistemas y redes. Mi experiencia internacional en Irlanda me ha proporcionado no solo habilidades técnicas de soporte, sino también una gran capacidad de adaptación y comunicación en inglés. Busco una oportunidad para aplicar mis crecientes conocimientos en desarrollo y aportar valor a un equipo dinámico.
                 </p>
             </section>
             
@@ -262,6 +320,34 @@
                 </div>
             </section>
 
+            <!-- ====================================================== -->
+            <!-- ================ NUEVA SECCIÓN DE PROYECTOS ============ -->
+            <!-- ====================================================== -->
+            <section class="section">
+                <h3 class="section-title">Proyectos</h3>
+                <div class="projects-grid">
+                    <!-- EDITAR AQUÍ: Este es un ejemplo. Copia y pega el bloque 'project-card' para cada proyecto que tengas. -->
+                    <div class="project-card">
+                        <h4>Nombre de Tu Proyecto 1</h4>
+                        <p>
+                            Esta es una breve descripción de tu proyecto. Explica qué hace, qué problema resuelve y qué aprendiste al hacerlo. Sé conciso y claro.
+                        </p>
+                        <div class="project-tech">
+                            <!-- Pon aquí los logos de las tecnologías que usaste -->
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3">
+                        </div>
+                        <div class="project-links">
+                            <!-- Cambia '#' por los enlaces reales a tu demo y a tu código -->
+                            <a href="#" target="_blank">Ver Demo</a>
+                            <a href="#" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                    <!-- Puedes añadir otra tarjeta de proyecto aquí -->
+                </div>
+            </section>
+
+
             <section class="section">
                 <h3 class="section-title">Experiencia Profesional</h3>
                 <div class="timeline">
@@ -269,10 +355,12 @@
                         <h4>Técnico de Soporte en Prácticas (Erasmus+)</h4>
                         <p class="sub-info">The LaptopShop, Dublin, Irlanda</p>
                         <p class="date">Marzo 2024 – Junio 2024</p>
+                        <!-- PUNTOS DE EXPERIENCIA MEJORADOS -->
                         <ul>
-                            <li>Instalación y mantenimiento de equipos informáticos y software.</li>
-                            <li>Resolución de incidencias técnicas de hardware y software.</li>
-                            <li>Soporte en gestión de redes y comunicación en inglés en entorno profesional.</li>
+                            <li>Gestioné la instalación, configuración y mantenimiento de equipos informáticos y software.</li>
+                            <li>Resolví incidencias técnicas de hardware y software, ofreciendo soporte de primer nivel.</li>
+                            <li>Colaboré en la administración de la red local para asegurar su correcto funcionamiento.</li>
+                            <li>Desarrollé mi fluidez en inglés en un entorno de trabajo profesional y multicultural.</li>
                         </ul>
                     </div>
                 </div>
@@ -296,4 +384,5 @@
         </main>
     </div>
 </body>
+
 </html>
