@@ -261,6 +261,15 @@ body {
 .tecnologia-proyecto img:hover {
     opacity: 1;
 }
+.elemento-habilidad i.fas {
+        font-size: 45px;
+        margin-bottom: 10px;
+        
+        color: #4a90e2; 
+        
+        width: 45px; 
+        text-align: center;
+    }
 
 .enlaces-proyecto {
     display: flex;
@@ -465,4 +474,5 @@ body.modo-oscuro .elemento-linea-tiempo h4 {
         font-size: 1rem;
     }
 }
+
 
