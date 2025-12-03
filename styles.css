@@ -448,6 +448,9 @@ body.modo-oscuro .elemento-linea-tiempo::before {
 body.modo-oscuro .titulo-seccion {
     color: #f8f9fa;
 }
+body.modo-oscuro .elemento-linea-tiempo h4 {
+    color: #f8f9fa;
+}
 .selector-tema:hover {
     transform: scale(1.1) rotate(15deg);
 }
@@ -462,3 +465,4 @@ body.modo-oscuro .titulo-seccion {
         font-size: 1rem;
     }
 }
+
