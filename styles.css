@@ -368,3 +368,97 @@ body {
         flex-direction: column;
     }
 }
+/* ========================================= */
+/* === CLASES Y ESTILOS PARA JAVASCRIPT ==== */
+/* ========================================= */
+
+/* 1. Animaciones de entrada (Scroll Reveal) */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px); /* Empieza un poco más abajo */
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Curva más dinámica */
+}
+
+.reveal.activo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* 2. Estilos del Modo Oscuro (modo-oscuro) */
+body.modo-oscuro {
+    /* Sobrescribir variables de color */
+    --color-principal: #1a1a1a;
+    --color-secundario: #61dafb; /* Azul más 'cián' que contrasta mejor */
+    --gris-claro: #121212;
+    --color-texto: #e0e0e0;
+    --sombra-tarjeta: 0 4px 15px rgba(255,255,255,0.05);
+}
+
+body.modo-oscuro .contenedor,
+body.modo-oscuro .tarjeta-proyecto,
+body.modo-oscuro .elemento-habilidad:hover { /* El hover de habilidad también se oscurece */
+    background-color: #1e1e1e;
+    border-color: #333;
+    color: #e0e0e0;
+}
+body.modo-oscuro .enlaces-proyecto a.contorno {
+    color: var(--color-principal); 
+    background-color: var(--color-secundario);
+}
+
+body.modo-oscuro .enlaces-proyecto a.contorno:hover {
+    background-color:#3498db; 
+    color: var(--color-texto); 
+}
+body.modo-oscuro .barra-lateral {
+    background-color: var(--color-principal);
+}
+
+body.modo-oscuro p,
+body.modo-oscuro .elemento-linea-tiempo .sub-info,
+body.modo-oscuro .elemento-linea-tiempo .fecha {
+    color: var(--color-texto);
+}
+
+body.modo-oscuro .elemento-linea-tiempo::before {
+    background-color: #1e1e1e;
+}
+
+/* Botón flotante para cambiar tema */
+.selector-tema {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-size: 1.2rem;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body.modo-oscuro .titulo-seccion {
+    color: #f8f9fa;
+}
+.selector-tema:hover {
+    transform: scale(1.1) rotate(15deg);
+}
+
+/* Ajuste responsive para el botón */
+@media (max-width: 600px) {
+    .selector-tema {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
