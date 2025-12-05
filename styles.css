@@ -186,6 +186,7 @@ body {
     transition: all 0.3s ease;
     width: 100%;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .elemento-habilidad:hover {
@@ -474,5 +475,6 @@ body.modo-oscuro .elemento-linea-tiempo h4 {
         font-size: 1rem;
     }
 }
+
 
 
